@@ -45,6 +45,6 @@ html, body {
 }
 
 .hello > .wrapper {
-  overflow: auto;
+  //overflow: auto;
 }
 </style>

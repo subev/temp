@@ -18,7 +18,7 @@ export default class Brick extends Vue {
 
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 
 .phone {
   background: red;
@@ -26,18 +26,26 @@ export default class Brick extends Vue {
   height: 100px;
 }
 
+.hello > .wrapper {
+  min-width: 100%;
+}
+
+.hello {
+  overflow: scroll;
+}
+
 .wrapper {
   border: 1px solid yellow;
-  display: flex;
+  display: inline-flex;
   flex: 0 1 100%;
   flex-direction: column;
 }
 
 .head {
-  display: flex;
+  display: inline-flex;
+  min-width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
-  padding: 20px;
   border: 1px solid green;
   justify-content: center;
 
@@ -46,7 +54,8 @@ export default class Brick extends Vue {
 
 .body {
   border: 1px solid red;
-  display: flex;
+  display: inline-flex;
+  min-width: 100%;
   justify-content: space-around;
 }
 </style>
