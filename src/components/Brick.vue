@@ -4,7 +4,7 @@
        <div class='phone'/>
      </div>
      <div class="body">
-       <slot name='default'>CHILDREN</slot>
+       <slot name='default'></slot>
      </div>
   </div>
 </template>
@@ -20,6 +20,10 @@ export default class Brick extends Vue {
 </script>
 <style lang="scss">
 
+* {
+  transition: all .3s;
+}
+
 .phone {
   background: red;
   width: 300px;
@@ -32,28 +36,31 @@ export default class Brick extends Vue {
 
 .hello {
   overflow: scroll;
+  height: 100%;
 }
 
 .wrapper {
-  border: 1px solid yellow;
+  border-width: 3px  3px 0px  3px;
+  padding: 5px;
+  border-style:solid solid solid solid;
+  border-color: #00000010;
   display: inline-flex;
   flex: 0 1 100%;
   flex-direction: column;
 }
 
 .head {
+  margin-top: 100px;
   display: inline-flex;
   min-width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
-  border: 1px solid green;
   justify-content: center;
 
   min-width: 300px;
 }
 
 .body {
-  border: 1px solid red;
   display: inline-flex;
   min-width: 100%;
   justify-content: space-around;
